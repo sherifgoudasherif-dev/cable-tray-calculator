@@ -1125,7 +1125,6 @@ function renderDiagram() {
     g += '<rect x="'+PAD+'" y="'+PAD+'" width="'+DISP_W+'" height="'+scaledTrayH+'" fill="none" stroke="'+TRAY_STROKE+'" stroke-width="5"/>';
     g += '<line x1="'+(PAD+usablePx)+'" y1="'+PAD+'" x2="'+(PAD+usablePx)+'" y2="'+(PAD+scaledTrayH)+'" stroke="#f59e0b" stroke-width="2" stroke-dasharray="8,5"/>';
     g += '<text x="'+(PAD+usablePx+5)+'" y="'+(PAD+15)+'" font-size="11" fill="#b45309" font-family="Segoe UI,Arial,sans-serif">← '+effFillRatio+'% limit</text>';
-    g += '<text x="'+PAD+'" y="'+(PAD-10)+'" font-size="9" fill="#94a3b8" font-family="Segoe UI,Arial,sans-serif">'+CTC_CREDIT+'</text>';
     g += '<line x1="'+PAD+'" y1="'+(PAD+scaledTrayH+10)+'" x2="'+(PAD+DISP_W)+'" y2="'+(PAD+scaledTrayH+10)+'" stroke="#94a3b8" stroke-width="1"/>';
     g += '<line x1="'+PAD+'" y1="'+(PAD+scaledTrayH+6)+'" x2="'+PAD+'" y2="'+(PAD+scaledTrayH+14)+'" stroke="#94a3b8" stroke-width="1"/>';
     g += '<line x1="'+(PAD+DISP_W)+'" y1="'+(PAD+scaledTrayH+6)+'" x2="'+(PAD+DISP_W)+'" y2="'+(PAD+scaledTrayH+14)+'" stroke="#94a3b8" stroke-width="1"/>';
@@ -1448,7 +1447,6 @@ function exportTrayDiagramPDF(svgId, trayNo) {
     const offsetY = 14;
 
     doc.addImage(imgData, 'PNG', offsetX, offsetY, drawW, drawH);
-    addPdfCredit(doc);
     doc.save('tray_' + trayNo + '_diagram.pdf');
   };
 
